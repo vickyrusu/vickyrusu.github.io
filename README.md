@@ -1,2 +1,2 @@
 # vickyrusu.github.io
-nimic nou
+nimic nou & apps for mobile course
