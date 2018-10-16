@@ -20,7 +20,7 @@ function rezolvare(coeficienti)
      if (delta >=0){
      	x1_re = (-coeficienti.b + Math.sqrt(delta)) / 2 * coeficienti.a;
         x2_im = (-coeficienti.b - Math.sqrt(delta)) / 2 * coeficienti.a;
-        x1_im = x2_imaginar = 0;
+        x1_im = x2_im = 0;
      }
      else{
           x1_re = -coeficienti.b/(2*coeficienti.a);
