@@ -43,7 +43,7 @@ function afisare()
    document.getElementById("id_x2").innerHTML = solutii.x2_re + " +" + solutii.x2_ima + "i";
 }
 
-}
+
 
 function rezolva()
 {
