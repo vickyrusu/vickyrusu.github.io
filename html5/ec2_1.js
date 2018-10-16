@@ -31,7 +31,7 @@ function rezolvare(coeficienti)
 
      }
      var x1 = {re: x1_re, im: x1_im};
-      var x1 = {re: x1_re, im: x1_im};
+      var x2 = {re: x2_re, im: x2_im};
       var solutii = {x1:x1, x2:x2};
    return solutii;
 }
@@ -39,8 +39,8 @@ function rezolvare(coeficienti)
 
 function afisare()
 {
- document.getElementById("id_x1").innerHTML = solutii.x1_re + " +" + solutii.x1_ima + "i";
-   document.getElementById("id_x2").innerHTML = solutii.x2_re + " +" + solutii.x2_ima + "i";
+ document.getElementById("id_x1").innerHTML = solutii.x1_re + " +" + solutii.x1_im + "i";
+   document.getElementById("id_x2").innerHTML = solutii.x2_re + " +" + solutii.x2_im + "i";
 }
 
 
