@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML = "Business version: 2018.10.29.0";
+document.getElementById("id_bussiness_version").innerHTML = "Business version: 2018.10.29.1";
 document.getElementById("id_start_button").addEventListener("click", start);
 document.getElementById("id_stop_button").addEventListener("click", stop);
 
@@ -30,7 +30,8 @@ function start() {
 
     //fir de executie
     //calculam separat numere prime si le afisam in desenare.html
-    var my_worker = new Worker("calcul_prime.js");
+    //my_worker este declarata vara var, ca sa fie globala
+    my_worker = new Worker("calcul_prime.js");
     my_worker.onmessage = function(e) {
         document.getElementById("id_prime").innerHTML = e.data;
     }
@@ -42,5 +43,8 @@ function start() {
 function stop() {
     document.getElementById("id_start_button").disabled = false;
     document.getElementById("id_stop_button").disabled = true;
+
+
     clearInterval(id_timer);
+    my_worker.postMessage("stop");
 }
