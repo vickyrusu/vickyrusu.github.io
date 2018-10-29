@@ -2,7 +2,7 @@ var stopped = false;
 //----------
 
 
-self.onmessage = function(e) {
+onmessage = function(e) {
         if (e.data == "stop") {
             stopped = true;
         }
