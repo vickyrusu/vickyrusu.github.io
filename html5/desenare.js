@@ -6,6 +6,7 @@ document.getElementById("id_stop_button").disabled = true;
 document.getElementById("id_start_button").disabled = false;
 
 var unghi_start = { unghi: 0 }; //in grade
+var my_worker = null;
 
 function deseneaza_cerc(unghi, context, w, h) {
     //clearRect este o metoda cu care stergem dreptunghiul
@@ -31,10 +32,14 @@ function start() {
     //fir de executie
     //calculam separat numere prime si le afisam in desenare.html
     //my_worker este declarata vara var, ca sa fie globala
-    my_worker = new Worker("calcul_prime.js");
-    my_worker.onmessage = function(e) {
-        document.getElementById("id_prime").innerHTML = e.data;
-    }
+    if (my_worker == null) {
+        my_worker = new Worker("calcul_prime.js");
+        my_worker.onmessage = function(e) {
+            document.getElementById("id_prime").innerHTML = e.data;
+        }
+
+    } else
+        my_worker.postMessage("start");
 
     id_timer = setInterval(deseneaza_cerc, 10, unghi_start, context, canvas.width, canvas.height);
 
