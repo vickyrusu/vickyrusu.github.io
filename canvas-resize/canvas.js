@@ -44,11 +44,11 @@ var mouse = {
 var maxRadius = 90;
 //var minRadius = 3;
 var colorArray = [
-    '#FF0000',
-    '#6DAFBA',
-    '#19B2FF',
-    '#FFCB05',
-    '#7F91E8',
+    '#F0FF00',
+    '#FA310C',
+    '#EF00FF',
+    '#0C98FA',
+    '#0CF035',
 
 ]
 
