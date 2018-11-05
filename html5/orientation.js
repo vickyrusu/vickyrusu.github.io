@@ -2,6 +2,7 @@ document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 
 
 window.addEventListener("deviceorientation", on_device_orientation);
 window.addEventListener("devicemotion", on_device_motion);
+
 //------------------------------------------------------
 function on_device_orientation(e) {
     document.getElementById("id_alpha").innerHTML = e.alpha;
@@ -22,10 +23,8 @@ function on_device_orientation(e) {
     context.stroke();
 }
 //------------------------------------------------------
-
 function on_device_motion(e) {
-    document.getElementById("id_acc_z").innerHTML = Math.round(e.accelerationIncludingGravity.z * 100);
-    document.getElementById("id_acc_x").innerHTML = Math.round(e.accelerationIncludingGravity.x * 100);
-    document.getElementById("id_acc_y").innerHTML = Math.round(e.accelerationIncludingGravity.y * 100);
-
+    document.getElementById("id_acc_z").innerHTML = Math.round(e.accelerationIncludingGravity.z * 100) / 100;
+    document.getElementById("id_acc_x").innerHTML = Math.round(e.accelerationIncludingGravity.x * 100) / 100;
+    document.getElementById("id_acc_y").innerHTML = Math.round(e.accelerationIncludingGravity.y * 100) / 100;
 }
