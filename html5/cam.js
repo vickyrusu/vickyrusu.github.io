@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML = "Business version: 2018.11.12.0";
+document.getElementById("id_bussiness_version").innerHTML = "Business version: 2018.11.12.1";
 document.getElementById("id_button").addEventListener("click", start);
 
 
@@ -13,7 +13,7 @@ function on_failure(e) {
 }
 //---------------
 function start() {
-    var c = { audio: true, video: true };
+    var c = { audio: true, video: true { facingMode: "environment" } };
     navigator.mediaDevices.getUserMedia(c).then(on_success).catch(on_failure);
 }
 //----------------
