@@ -13,7 +13,7 @@ function on_failure(e) {
 }
 //---------------
 function start() {
-    var c = { audio: true, video: true { facingMode: "environment" } };
+    var c = { audio: true, video: { facingMode: "environment" } };
     //accesare camera fata
     navigator.mediaDevices.getUserMedia(c).then(on_success).catch(on_failure);
 }
