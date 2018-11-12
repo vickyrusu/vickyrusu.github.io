@@ -25,3 +25,7 @@ function on_touch(e) {
     var video = document.getElementById("id_video");
     context.drawImage(video, 0, 0, );
 }
+
+
+//pentru aplicatia finala: obligatoriu timer, fire de executie, aplicatie 
+//care se executa asincron
