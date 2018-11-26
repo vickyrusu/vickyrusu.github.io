@@ -38,7 +38,7 @@ function on_touch_move(e) {
         context.lineTo(e.changedTouches[i].pageX - canvas_bounding_rect.left,
             e.changedTouches[i].pageY - canvas_bounding_rect.top);
 
-        context.lineWidth = 1;
+        //context.lineWidth = 1;
         context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left,
             e.changedTouches[i].pageY - canvas_bounding_rect.top,
             10,
