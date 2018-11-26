@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.3";
+document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.4";
 
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch_start);
@@ -43,5 +43,7 @@ function on_touch_move(e) {
             0,
             2 * Math.PI);
         context.stroke();
+        last_pos.x = e.changedTouches[i].pageX;
+        last_pos.y = e.changedTouches[i].pageY;
     }
 }
